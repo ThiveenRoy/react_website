@@ -21,54 +21,38 @@ const NAV = [
 const TIMELINE = [
   {
     title: "Software QA Engineer",
-    meta: "Creative Labs Pte Ltd • Full-time • Singapore • Sep 2023 – Present",
+    meta: "Creative Labs Pte Ltd • Sep 2023 – Present",
     bullets: [
-      "Execute, create, and modify test cases to ensure high-quality standards.",
-      "Create, edit, and manage test cases and device configurations in TestRail.",
-      "Log and track defects using Mantis, focusing on accurate reproduction.",
-      "Manual test coverage across Windows, iOS, Android, macOS.",
-      "Started automation testing using Katalon Studio.",
-      "Emphasize detail, scalability, and reliability in QA practices.",
+      "Ensure high-quality standards through test cases and automation.",
+      "Manage test cases and defects (TestRail, Mantis).",
+      "Manual & automation test coverage across Windows, iOS, Android, macOS.",
     ],
   },
   {
     title: "Transport Operator (NSF)",
-    meta: "Singapore Armed Forces (SAF) • On-site • Jul 2021 – Jul 2023",
+    meta: "Singapore Armed Forces • Jul 2021 – Jul 2023",
     bullets: [
-      "Operated Class 3/4 vehicles (OUVs, Land Rovers, Tonners).",
-      "Completed Basic Military Training.",
-      "Appointed as Vehicle Commander for operations.",
-      "Transported personnel and equipment safely.",
-      "Awarded CTO Coin for exemplary service.",
+      "Operated Class 3/4 military vehicles for logistics operations.",
+      "Appointed as Vehicle Commander for missions.",
+      "Received CTO Coin for exemplary service.",
     ],
   },
   {
     title: "Software Engineer",
-    meta: "Zionext Pte Ltd • Contract • Singapore • Mar 2021 – Jul 2021",
+    meta: "Zionext Pte Ltd • Mar 2021 – Jul 2021",
     bullets: [
-      "Promoted after 1 month as SDET.",
-      "Built ASP.NET server-side apps and Android mobile apps.",
-      "Delivered high-quality code for gov project sign-off.",
-      "Agile team collaboration, Git, JIRA used.",
-      "Sharpened both dev and test skills significantly.",
+      "Developed ASP.NET web apps and Android apps for government project.",
+      "Collaborated in Agile team using Git and JIRA.",
+      "Promoted to SDET within first month.",
     ],
   },
   {
-    title: "SDET",
-    meta: "MQ Spectrum Pte Ltd • Contract • On-site • Mar 2021",
+    title: "SDET / SDET Intern",
+    meta: "MQ Spectrum Pte Ltd • Mar 2020 – Mar 2021",
     bullets: [
-      "Continued after graduation as contractor.",
-      "Tested apps/websites using Agile methodology.",
-      "Logged defects in JIRA and worked on resolutions.",
-    ],
-  },
-  {
-    title: "SDET Intern",
-    meta: "MQ Spectrum Pte Ltd • Singapore • On-site • Mar 2020 – Sep 2020",
-    bullets: [
-      "Tested applications and websites to ensure functionality.",
-      "Used Agile, participated in daily stand-ups and sprints.",
-      "Logged bugs in JIRA and verified fixes.",
+      "Tested apps and websites in Agile teams.",
+      "Logged and verified defects in JIRA.",
+      "Participated in daily stand-ups and sprints.",
     ],
   },
 ];
@@ -372,7 +356,11 @@ export default function App() {
                 contentArrowStyle={{
                   borderRight: `8px solid #ffea64`
                 }}
-                date={item.meta}
+                date={item.meta.split('•').map((str, idx) =>
+                  idx === 0
+                    ? <>{str.trim()} <span style={{ color: '#23dd68', margin: '0 6px' }}></span><br /></>
+                    : str.trim()
+                )}
                 dateClassName="timeline-date"
                 iconStyle={{
                   background: "#23dd68",

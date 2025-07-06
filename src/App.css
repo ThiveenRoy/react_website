@@ -419,7 +419,9 @@ ul {
 }
 li {
   margin-bottom: 1.2rem;
-  color: #ffea64;
+  color: #fff;
+  font-size: 1.06em;
+  line-height: 1.6;
 }
 .contact-block {
   margin-top: 2.5rem;
@@ -506,10 +508,16 @@ li {
   border-right: 8px solid #ffea64 !important;
 }
 .vertical-timeline-element-date, .timeline-date {
-  color: #23dd68 !important;
-  font-size: 0.89rem !important;
+  color: #b8fd80 !important;
+  font-size: 1.02rem !important;
   font-family: 'Press Start 2P', monospace !important;
   text-shadow: 1px 1px 0 #000;
+  letter-spacing: 0.02em;
+  padding-top: 1.3em;
+  padding-bottom: 0.3em;
+  display: block;
+  opacity: 0.96;
+  text-shadow: 1px 1px 0 #23193f, 0 0 7px #23dd6844;
 }
 .vertical-timeline-element-title,
 .timeline-title {
@@ -764,5 +772,6 @@ li {
     width: 100%;
   }
 }
+
 
 /* --- END --- */
